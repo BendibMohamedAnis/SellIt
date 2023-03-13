@@ -12,8 +12,15 @@ Route::get('/', function () {
     ]);
 });
 
-Auth::routes();
 
+Auth::routes(['verify'=>true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/profile/{profile_id}', [App\Http\Controllers\ProfileController::class, 'show_profile'])->name('profile_id.show');
-Route::post('/profileUpdate', [App\Http\Controllers\ModifyProfileController::class, 'ModifyProfile']);
+
+Route::group(['prefix'=>'user','namespace'=>'App\Http\Controllers\user'],function(){
+    Route::get('{profile_id}', 'ProfileController@show_profile')->name('profile.show');
+    Route::post('updateProfile', 'ModifyProfileController@ModifyProfile')->name('updateProfile');
+
+});
+
+;
+

@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\user;
+use Illuminate\Routing\Controller;
+
+
 use App\Controllers\Auth\ProfileController;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Redirect;
+
 class ModifyProfileController extends Controller
 {
     public function ModifyProfile(Request $request){
@@ -16,6 +20,6 @@ class ModifyProfileController extends Controller
         $user->save();
 
         
-        return redirect('/profile/'.$request->id);
+        return redirect('/user/'.$request->id);
     }
 }
