@@ -17,6 +17,10 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">{{ __('Products') }}</a>
+                </li>
+                
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -30,32 +34,38 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about')}}">{{ __('About') }}</a>
+                    </li>
                 @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('wishlist',Auth::user()->id) }}">{{ __('Wishlist') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about')}}">{{ __('About') }}</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->username }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  href="{{ route('profile.show',Auth::user()->id) }}"> Profile</a> 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-                            
-                            
-                            <a class="dropdown-item"  href="{{ route('profile.show',Auth::user()->id) }}">
-                                    Profile</a>
-                            
+                             
                         </div>
-
+                        
                     </li>
 
                 @endguest
+                
             </ul>
         </div>
     </div>
