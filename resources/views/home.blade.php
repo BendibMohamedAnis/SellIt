@@ -14,10 +14,10 @@
     </div>
 </div>
 
-<div class="row w-100" 
+<div class="row" 
     style="      
         aspect-ratio:960/193.05;
-        width: 100%;
+        
         margin-top:-110px;
         background-repeat: no-repeat;
         background-position: center;
@@ -29,7 +29,7 @@
 <div class="card-group p-4 justify-content-around " >
     <div class="row justify-content-around">
         @foreach($products as $product) 
-            @for ($i = 0; $i <= 3; $i++)
+            @for ($i = 0; $i <= 2; $i++)
             <div class="card  m-3 p-3 border" style="height:450px; max-width:300px; overflow:hidden;width: 18rem;">
                 <img  style="height:200px;object-fit: cover;"   src="data:image/png;base64,{{ chunk_split(base64_encode($product->image)) }}" alt="image">
                 <p class="mt-2"> {{$product->price}} $</p>
