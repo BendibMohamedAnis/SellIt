@@ -1,4 +1,4 @@
-<h1 style="display: flex; align-items: center;"><img src="https://user-images.githubusercontent.com/46926963/230424784-4b3d9fcd-8783-4709-99d7-7c368499034d.png" width="50" height="50" alt="Logo" style="margin-right: 10px;"><span style="display: inline-flex; align-items: center;">SellIt</span></h1>
+<h1 style="display: flex; align-items: center;"><img src="https://user-images.githubusercontent.com/46926963/230424784-4b3d9fcd-8783-4709-99d7-7c368499034d.png" width="50" height="50" alt="Logo" style="margin-right: 10px;"><span style="display: inline-flex; align-items: flex-start; margin-top: 4px;">SellIt</span></h1>
 
 
 
