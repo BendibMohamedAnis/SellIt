@@ -1,4 +1,4 @@
-<h1 style="display: flex; align-items: center;"><img src="https://user-images.githubusercontent.com/46926963/230424784-4b3d9fcd-8783-4709-99d7-7c368499034d.png" width="50" height="50" alt="Logo" style="margin-right: 10px;"><span style="display: inline-block; line-height: 50px;">SellIt</span></h1>
+<h1 style="display: flex; align-items: center;"><img src="https://user-images.githubusercontent.com/46926963/230424784-4b3d9fcd-8783-4709-99d7-7c368499034d.png" width="50" height="50" alt="Logo" style="margin-right: 10px; margin-bottom: 5px;"><span style="display: inline-block; vertical-align: middle;">SellIt</span></h1>
 
 
 SellIt is my new  ecommerce web application built with Laravel that allows users to buy and sell products online. It includes various features like login with email or phone number, email verification, register, wishlist, list of items with duration of upload, name, description, price and reductions, and pictures of the product. Users can also edit their profile details like name, username, password, and profile picture. It's still under developement so many features are temporarly unstable and require more testing and fixing .
