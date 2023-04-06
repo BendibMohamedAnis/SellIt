@@ -18,7 +18,9 @@ SellIt is my new  ecommerce web application built with Laravel that allows users
 ## Screenshots
 
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/46926963/230424162-4b1875b8-4f9d-43b8-aa5d-1393fd9e1140.png">
+</p>
 
 
 
